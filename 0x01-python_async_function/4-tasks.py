@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Alter function
+"""Alter function"""
 import asyncio
 import random
 from typing import List
