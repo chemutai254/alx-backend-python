@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Create an async function
+"""Create an async function"""
 import asyncio
 import random
 
