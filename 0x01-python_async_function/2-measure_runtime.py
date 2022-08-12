@@ -1,4 +1,4 @@
-#!i/usr/bin/env python3
+#!/usr/bin/env python3
 """Measures the runtime"""
 import asyncio
 import time
