@@ -10,9 +10,9 @@ class TestAccessNestedMap(unittest.TestCase):
     Parametization tests the function of below inputs
     """
     @parametized.expand([
-        nested_map={"a": 1}, path=("a",),
-        nested_map={"a": {"b": 2}}, path=("a",),
-        nested_map={"a": {"b": 2}}, path=("a", "b"),
+        ({"a": 1}, ("a",), 1),
+        ({"a": {"b": 2}}, ("a",), {"b": 2}),
+        ({"a": {"b": 2}}, ("a", "b"), 2),
     ])
     def test_access_nested_map(self, nested_map, message):
         """
@@ -20,9 +20,8 @@ class TestAccessNestedMap(unittest.TestCase):
         what its suppossed to
         """
     @parametized.expand([
-        nested_map={"a": 1}, path=("a",),
-        nested_map={"a": {"b": 2}}, path=("a",),
-        nested_map={"a": {"b": 2}}, path=("a", "b"),
+        ({}, ("a",), 'a'),
+        ({"a": 1}, ("a", "b"), 'b') 
     ])
     message = "Successfully returns the expected output"
     self.assert_equal(nested_map, message)
