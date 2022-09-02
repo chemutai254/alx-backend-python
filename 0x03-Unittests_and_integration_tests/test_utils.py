@@ -25,3 +25,7 @@ class TestAccessNestedMap(unittest.TestCase):
     ])
     message = "Successfully returns the expected output"
     self.assert_equal(nested_map, message)
+
+    def test_access_nested_map_exception():
+        """Uses assertRaises to raise an alert"""
+
